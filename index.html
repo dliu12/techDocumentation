@@ -57,7 +57,9 @@
                     </h2>
                 </header>
                 <div>
-                    <p></p>
+                    <p>This is the simplest JavaScript code</p>
+                    <code>console.log(“Hello World”);</code>
+                    <p>The <code>console.log(arg)</code> command prints out the argument in the web browser’s console. This command is useful in various situations for testing purposes.</p>
                 </div>
             </section>
             <section class="main-section" id="Variables">
@@ -67,7 +69,58 @@
                     </h2>
                 </header>
                 <div>
-                    <p></p>
+                    <strong>What are variables?</strong>
+                    <p>Variables are place holders. They hold values under specific identifiers. For example:</p>
+                    <code>
+                        x = 5;
+                        <br>
+                        Variable_x = 6; 
+                    </code>
+                    <p>In the first case, the identifier is “x” and the value that this identifier holds is 5. Similarly, in the second case, the identifier is “Variable_x” and the value that this identifier holds is 6. </p>
+                </div>
+                <div>
+                    <strong>Declaring variables</strong>
+                    <p>Now that we know what variables are, before we can use them, we need to declare the variable by giving it an identifier and keyword. You can declare a variable in one of the three following ways:</p>
+                    <code>
+                        var Name; //used for both global and local scope
+                        <br>
+                        let Name; //used in only local scope
+                        <br>
+                        const Name; //identify a constant variable, a variable that cannot change throughout the code
+                    </code>
+                    <p>To assign values to a variable, use the assignment operator “=”. For example:</p>
+                    <code>
+                        Name = “Emma”;
+                    </code>
+                    <p>Or</p>
+                    <code>
+                        var Name = “Emma”;
+                    </code>
+                </div>
+                <div>
+                    <strong>Variable scope</strong>
+                    <p>The scope of a variable is it’s availability with respect to the rest of the code. A global (scope) variable can be seen and accessed anywhere in the code, meanwhile a local (scope) variable can only be seen and accessed within its’ function (see function section).
+                        <br>
+                        For example:
+                    </p>
+                    <code>
+                        <div>
+                            if(true){
+                                var x = 5;
+                                console.log(x); // console will show: 5
+                            }
+                            <br>
+                            console.log(x); //console will show:5
+                        </div>
+                        <div>
+                            if(true){
+                                let y = 5;
+                                console.log(y); //console will show: 5
+                            }
+                            <br>
+                            console.log(y) // console will show : Reference Error : y is not defined
+                        </div>
+                    </code>
                 </div>
             </section>
             <section class="main-section" id="Conditions">
@@ -77,7 +130,42 @@
                     </h2>
                 </header>
                 <div>
-                    <p></p>
+                    <p>In simple words, condition statements are a set of instructions that tells you code how it should make decisions. For example, “If I have 5 dollars or more, then I will buy apples. If I have less than 5 dollars, then I will buy cherries. If I have no money, then I won’t buy anything.”
+                        <br>
+                        This sentence can be translated to the following condition statement:
+                    </p>
+                    <code>
+                        if( money >= 5){
+                            console.log(“Buy Apples”);
+                        }
+                        <br>
+                        else if (money < 5){
+                            console.log(“Buy cherries”);
+                        }
+                        <br>
+                        else{
+                            //if none of the above conditions are satisfied
+                            <br>
+                            console.log(“Not buying anything”);
+                        }
+                    </code>
+                    <p>
+                        In general, conditions are written in the following format. Note that you can have as many else if statements as you see fit, that means you can also have no else if statement. 
+                    </p>
+                    <code>
+                        If (condition){
+                            execute code;
+                        }
+                        <br>
+                        else if(condition){
+                            execute code;
+                        }
+                        <br>
+                        else{
+                            execute code;
+                        }
+                        
+                    </code>
                 </div>
             </section>
             <section class="main-section" id="Loops">
@@ -87,7 +175,25 @@
                     </h2>
                 </header>
                 <div>
-                    <p></p>
+                    <p>Loops are a block of code that will be executed repeatedly when certain conditions are met.  There are many different types of loops that are available for use, this documentation will specifically look at the while loop. In general, the while loop has the following struc</p>
+                    <code>
+                        while(condition){
+                            <br>
+                            execute code;
+                            <br>
+                        }
+
+                        <br>
+                        //Sample code:
+                        <br>
+                        while (true){
+                            <br>
+                            console.log(“true”); <br>
+                            //when the condition is true, print “true” in the console.
+                            <br>
+                        }
+                    
+                    </code>
                 </div>
             </section>
             <section class="main-section" id="Functions">
@@ -97,7 +203,34 @@
                     </h2>
                 </header>
                 <div>
-                    <p></p>
+                    <p>A function definition (also called a function declaration, or function statement) consists of the function keyword, followed by:
+                        <ul>
+                            <li>
+                                The name of the function.
+                            </li>
+                            <li>
+                                A list of arguments to the function, enclosed in parentheses and separated by commas.
+                            </li>
+                            <li>
+                                The JavaScript statements that define the function, enclosed in curly brackets, { }.
+                            </li>
+                        </ul>
+                    </p>
+                    <p>
+                        For example, the following code defines a simple function named square:
+                    </p>
+                    <code>
+                        function square(number) { return number * number; }
+                    </code>
+                    <p>
+                        The function square takes one argument, called number. The function consists of one statement that says to return the argument of the function (that is, number) multiplied by itself. The return statement specifies the value returned by the function.
+                    </p>
+                    <code>
+                        return number * number;
+                    </code>
+                    <p>
+                        Primitive parameters (such as a number) are passed to functions by value; the value is passed to the function, but if the function changes the value of the parameter, this change is not reflected globally or in the calling function.
+                    </p>
                 </div>
             </section>
             <section class="main-section" id="References">
@@ -107,7 +240,15 @@
                     </h2>
                 </header>
                 <div>
-                    <p></p>
+                    <ul>
+                        <li>References taken from 
+                            <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target= "_blank">MDN</a>
+                        </li>
+                        <li>References taken from <a href="https://www.w3schools.com/js/default.asp" target="_blank">W3School</a>
+                        </li>
+                        <li>References taken from <a href="https://codepen.io/freeCodeCamp/full/NdrKKL" target="_blank">FreeCodeCamp</a>
+                        </li>
+                    </ul>
                 </div>
             </section>
         </main>
