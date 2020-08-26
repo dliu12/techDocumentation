@@ -1,0 +1,131 @@
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+body #navbar {
+  width: 30%;
+  height: 100%;
+  min-width: -webkit-fit-content;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+  max-width: 250px;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+  background-color: #F9C784;
+}
+
+body #navbar header h1 {
+  margin: 0;
+  padding: 0;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 42px;
+  font-weight: bold;
+  font-family: "Red Hat Text", sans-serif;
+  color: #545E56;
+  text-shadow: 0px 4px 0px #FCAF58;
+}
+
+body #navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+body #navbar ul li {
+  margin: 0 auto 0 auto;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  width: 85%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  min-height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: "Red Hat Text", sans-serif;
+  background-color: #667761;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+body #navbar ul li a, body #navbar ul li a:visited {
+  background-color: #FF8C42;
+  color: transparent;
+  text-shadow: 0px 1px 0px rgba(249, 199, 132, 0.75);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+body #navbar ul li:hover {
+  background-color: #545E56;
+  border: 2px solid white;
+}
+
+body #navbar ul li:hover a {
+  color: #F9C784;
+  text-shadow: 0px 2px 0px rgba(252, 175, 88, 0.5);
+}
+
+body #navbar::-webkit-scrollbar {
+  display: none;
+}
+
+body #main-doc {
+  width: 100%;
+  overflow-y: scroll;
+  padding-left: 15px;
+  scroll-behavior: smooth;
+}
+
+body #main-doc .main-section {
+  border: 1px solid red;
+}
+
+body #main-doc .main-section header {
+  border: 1px solid red;
+}
+
+body #main-doc .main-section header h2 {
+  border: 1px solid red;
+  font-family: "Red Hat Text", sans-serif;
+  color: #1F0B0A;
+  border-bottom: 3px solid #545E56;
+}
+/*# sourceMappingURL=style.css.map */
