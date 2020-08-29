@@ -7,10 +7,17 @@
         <meta name="author" content="Diyi Liu">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>JavaScript Documentation</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@400;500;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="animation.js"></script>
     </head>
     <body>
+        <div class="navBarIcon">
+            <i class="fa fa-plus-square" style="font-size:20px;"></i>
+        </div>
         <nav id="navbar">
             <header>
                 <h1 id="headerTitle">JavaScript</h1>
@@ -60,9 +67,15 @@
                     </h2>
                 </header>
                 <div>
-                    <p>This is the simplest JavaScript code</p>
-                    <code>console.log(“Hello World”);</code>
-                    <p>The <code>console.log(arg)</code> command prints out the argument in the web browser’s console. This command is useful in various situations for testing purposes.</p>
+                    <p>This is the simplest JavaScript code:</p>
+<!--pre-->
+<pre>
+<code class="code">
+    console.log("Hello World");
+</code>
+</pre>
+<!--pre end -->
+                    <p>The <code class="inline-code">console.log(arg)</code> command prints out the argument in the web browser’s console. This command is useful in various situations for testing purposes.</p>
                 </div>
             </section>
             <section class="main-section" id="Variables">
@@ -74,31 +87,41 @@
                 <div>
                     <strong>What are variables?</strong>
                     <p>Variables are place holders. They hold values under specific identifiers. For example:</p>
-                    <code>
-                        x = 5;
-                        <br>
-                        Variable_x = 6; 
-                    </code>
+<!-- pre -->
+<pre>
+<code class="code">
+    x = 5;
+
+    Variable_x = 6; 
+</code>
+</pre>
+<!-- pre end -->
                     <p>In the first case, the identifier is “x” and the value that this identifier holds is 5. Similarly, in the second case, the identifier is “Variable_x” and the value that this identifier holds is 6. </p>
                 </div>
                 <div>
                     <strong>Declaring variables</strong>
                     <p>Now that we know what variables are, before we can use them, we need to declare the variable by giving it an identifier and keyword. You can declare a variable in one of the three following ways:</p>
-                    <code>
-                        var Name; //used for both global and local scope
-                        <br>
-                        let Name; //used in only local scope
-                        <br>
-                        const Name; //identify a constant variable, a variable that cannot change throughout the code
-                    </code>
+<!-- pre -->
+<pre>
+<code class="code">
+    var Name; // used for both global and local scope
+    let Name; // used in only local scope
+    const Name; // identify a constant variable, a variable that cannot change throughout the code
+</code>
+</pre>
+<!-- pre end -->
                     <p>To assign values to a variable, use the assignment operator “=”. For example:</p>
-                    <code>
-                        Name = “Emma”;
-                    </code>
-                    <p>Or</p>
-                    <code>
-                        var Name = “Emma”;
-                    </code>
+<!-- pre -->
+<pre>
+<code class="code">
+    Name = “Emma”;
+
+    // Or
+
+    var Name = “Emma”;
+</code>
+</pre>
+<!-- pre end -->
                 </div>
                 <div>
                     <strong>Variable scope</strong>
@@ -106,24 +129,25 @@
                         <br>
                         For example:
                     </p>
-                    <code>
-                        <div>
-                            if(true){
-                                var x = 5;
-                                console.log(x); // console will show: 5
-                            }
-                            <br>
-                            console.log(x); //console will show:5
-                        </div>
-                        <div>
-                            if(true){
-                                let y = 5;
-                                console.log(y); //console will show: 5
-                            }
-                            <br>
-                            console.log(y) // console will show : Reference Error : y is not defined
-                        </div>
-                    </code>
+<!-- pre -->
+<pre>
+ <code class="code">
+    if(true){
+        var x = 5;
+        console.log(x); // console will show: 5
+    }
+                            
+     console.log(x); // console will show:5
+     
+
+    if(true){
+        let y = 5;
+        console.log(y); // console will show: 5
+    }
+    console.log(y) // console will show : Reference Error : y is not defined
+ </code>
+</pre>
+<!-- pre end -->
                 </div>
             </section>
             <section class="main-section" id="Conditions">
@@ -137,38 +161,42 @@
                         <br>
                         This sentence can be translated to the following condition statement:
                     </p>
-                    <code>
-                        if( money >= 5){
-                            console.log(“Buy Apples”);
-                        }
-                        <br>
-                        else if (money < 5){
-                            console.log(“Buy cherries”);
-                        }
-                        <br>
-                        else{
-                            //if none of the above conditions are satisfied
-                            <br>
-                            console.log(“Not buying anything”);
-                        }
-                    </code>
+<!-- pre -->
+<pre>
+<code class="code">
+    if( money >= 5){
+        console.log("Buy Apples")
+    }
+    else if (money < 5){
+        console.log(“Buy cherries”);
+    }
+    else{
+        //if none of the above conditions are satisfied
+        console.log("Not buying anything");
+    }
+</code>
+</pre>
+<!-- pre end -->
                     <p>
                         In general, conditions are written in the following format. Note that you can have as many else if statements as you see fit, that means you can also have no else if statement. 
                     </p>
-                    <code>
-                        If (condition){
-                            execute code;
-                        }
-                        <br>
-                        else if(condition){
-                            execute code;
-                        }
-                        <br>
-                        else{
-                            execute code;
-                        }
-                        
-                    </code>
+<!-- pre -->
+<pre>
+<code class="code">
+    If (condition){
+        execute code;
+    }
+
+    else if(condition){
+        execute code;
+    }
+
+    else{
+        execute code;
+    }                      
+</code>
+</pre>
+<!-- pre end -->
                 </div>
             </section>
             <section class="main-section" id="Loops">
@@ -179,24 +207,21 @@
                 </header>
                 <div>
                     <p>Loops are a block of code that will be executed repeatedly when certain conditions are met.  There are many different types of loops that are available for use, this documentation will specifically look at the while loop. In general, the while loop has the following struc</p>
-                    <code>
-                        while(condition){
-                            <br>
-                            execute code;
-                            <br>
-                        }
+<!-- pre -->
+<pre>
+<code class="code">
+    while(condition){
+        execute code;
+    }
 
-                        <br>
-                        //Sample code:
-                        <br>
-                        while (true){
-                            <br>
-                            console.log(“true”); <br>
-                            //when the condition is true, print “true” in the console.
-                            <br>
-                        }
-                    
-                    </code>
+    //Sample code:
+    while (true){
+        console.log(“true”);
+        //when the condition is true, print “true” in the console.
+    }                   
+</code>
+</pre>
+<!-- pre end -->
                 </div>
             </section>
             <section class="main-section" id="Functions">
@@ -222,15 +247,25 @@
                     <p>
                         For example, the following code defines a simple function named square:
                     </p>
-                    <code>
-                        function square(number) { return number * number; }
-                    </code>
+<!-- pre -->
+<pre>
+<code class="code">
+    function square(number) { 
+        return number * number; 
+    }
+</code>
+</pre>
+<!-- pre end -->
                     <p>
                         The function square takes one argument, called number. The function consists of one statement that says to return the argument of the function (that is, number) multiplied by itself. The return statement specifies the value returned by the function.
                     </p>
-                    <code>
-                        return number * number;
-                    </code>
+<!-- pre -->
+<pre>
+<code class="code">
+    return number * number;
+</code>
+</pre>
+<!-- pre end -->
                     <p>
                         Primitive parameters (such as a number) are passed to functions by value; the value is passed to the function, but if the function changes the value of the parameter, this change is not reflected globally or in the calling function.
                     </p>

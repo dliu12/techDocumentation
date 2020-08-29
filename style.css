@@ -24,6 +24,19 @@ body {
           flex-direction: row;
 }
 
+body .navBarIcon {
+  display: none;
+  color: #545E56;
+  text-shadow: 0px 2px 0px #FCAF58;
+}
+
+@media only screen and (max-width: 600px) {
+  body .navBarIcon {
+    display: block;
+    z-index: 2;
+  }
+}
+
 body #navbar {
   width: 30%;
   height: 100%;
@@ -37,6 +50,14 @@ body #navbar {
   scrollbar-width: none;
   /* Firefox */
   background-color: #F9C784;
+}
+
+@media only screen and (max-width: 600px) {
+  body #navbar {
+    display: none;
+    z-index: 1;
+    position: absolute;
+  }
 }
 
 body #navbar header h1 {
@@ -114,18 +135,59 @@ body #main-doc {
   scroll-behavior: smooth;
 }
 
-body #main-doc .main-section {
-  border: 1px solid red;
+@media only screen and (max-width: 600px) {
+  body #main-doc {
+    padding-left: 0;
+    padding-right: 15px;
+  }
 }
 
-body #main-doc .main-section header {
-  border: 1px solid red;
+body #main-doc .main-section {
+  width: 75%;
+}
+
+@media only screen and (max-width: 950px) {
+  body #main-doc .main-section {
+    width: 100%;
+  }
 }
 
 body #main-doc .main-section header h2 {
-  border: 1px solid red;
+  width: 100%;
   font-family: "Red Hat Text", sans-serif;
+  font-size: 30px;
   color: #1F0B0A;
   border-bottom: 3px solid #545E56;
+}
+
+body #main-doc .main-section div p {
+  margin: 0;
+  padding: 0;
+  font-family: "Lato", sans-serif;
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+body #main-doc .main-section div ul {
+  font-family: "Lato", sans-serif;
+  font-size: 15px;
+}
+
+body #main-doc .main-section div ul a, body #main-doc .main-section div ul a:visited {
+  color: #545E56;
+}
+
+body #main-doc .main-section div pre {
+  background-color: whitesmoke;
+  white-space: pre-wrap;
+  /* Since CSS 2.1 */
+  white-space: -moz-pre-wrap;
+  /* Mozilla, since 1999 */
+  white-space: -pre-wrap;
+  /* Opera 4-6 */
+  white-space: -o-pre-wrap;
+  /* Opera 7 */
+  word-wrap: break-word;
+  /* Internet Explorer 5.5+ */
 }
 /*# sourceMappingURL=style.css.map */

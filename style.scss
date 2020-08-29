@@ -10,9 +10,17 @@ $borderTester: 1px solid red;
     width:100%;
     height:100%;
 }
+// media query width
+$media950:950px;
+$media600:600px;
+// main content width
+$largeScreenWidth: 75%;
+$mediumScreenWidth:100%;
+//code background color
+$codeBack: rgba(245,245,245,1);
 //fonts
 $headerFont:'Red Hat Text', sans-serif;
-
+$bodyFont:'Lato', sans-serif;
 //color palette
 $off_black: #1F0B0A;
 $forest_green:#667761;
@@ -38,6 +46,17 @@ body{
 
     display:flex;
     flex-direction:row;
+
+    .navBarIcon{
+        display:none;
+        color:$olive_green;
+        text-shadow:0px 2px 0px $mango;
+        @media only screen and (max-width:$media600){
+            display:block;
+            z-index:2;
+        }
+    }
+    
     #navbar{
         width:30%;
         height:100%;
@@ -51,6 +70,13 @@ body{
 
         // background
         background-color:$lemon_light;
+
+        //media query hide nav bar - show on click 
+        @media only screen and (max-width:$media600){
+            display:none;
+            z-index:1;
+            position:absolute;
+        }
 
         // header Title
         header{
@@ -124,20 +150,49 @@ body{
     }
 
     #main-doc{
-        // background:lightsalmon;
         width:100%;
         overflow-y:scroll;
         padding-left:15px;
+        @media only screen and (max-width:$media600){
+            padding-left:0;
+            padding-right:15px;
+        }
         scroll-behavior: smooth;
         .main-section{
-            border:$borderTester;
+            width:$largeScreenWidth;
+            @media only screen and (max-width:$media950){
+                width:$mediumScreenWidth;
+            }
             header{
-                border:$borderTester;
                 h2{
-                    border:$borderTester;
+                    width:100%;
                     font-family: $headerFont;
+                    font-size:30px;
                     color:$off_black;
                     border-bottom:3px solid $olive_green;
+                }
+            }
+            div{
+                p{
+                    @include setMarPad();
+                    font-family: $bodyFont;
+                    font-size:15px;
+                    line-height:1.75;
+                }
+                ul{
+                    font-family: $bodyFont;
+                    font-size:15px;
+                    a,a:visited{
+                        color:$olive_green;
+                    }
+                }
+                pre{
+                    background-color:$codeBack;
+                    white-space: pre-wrap;       /* Since CSS 2.1 */
+                    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+                    white-space: -pre-wrap;      /* Opera 4-6 */
+                    white-space: -o-pre-wrap;    /* Opera 7 */
+                    word-wrap: break-word;       /* Internet Explorer 5.5+ */
                 }
             }
         }
